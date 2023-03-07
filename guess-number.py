@@ -3,11 +3,15 @@
 # 計數猜幾次
 
 import random
-r = random.randint(1, 100)
+n = input('自訂猜數字的範圍最小整數是：')
+m = input('自訂猜數字的範圍最大整數是：')
+n = int(n)
+m = int(m)
+r = random.randint(n, m)
 i = 0
 while True:
 	i += 1  #i = i + 1
-	num = input('請猜數字(1~100)：')
+	num = input('請猜數字：')
 	num = int(num)
 	if num == r:
 		print('答對了！')
